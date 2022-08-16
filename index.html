@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Javascript</title>
+</head>
+
+<body>
+    <h2 id="input-text-update">Hey this is my update text</h2>
+    <input id='text-field' type="text">
+    <button id="text-update" onclick="">Update you text</button>
+    <script>
+        document.getElementById('text-update').addEventListener('click', function () {
+            const fromText = document.getElementById('text-field');
+            const takeText = fromText.value;
+            const p = document.getElementById('input-text-update');
+            p.innerText = takeText;
+            fromText.value = ' ';
+        })
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
